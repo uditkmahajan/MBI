@@ -1,0 +1,22 @@
+{% extends 'admin/basic.html' %}
+{% block title %}Admin - upload {% endblock title %}
+{% block active %}active{% endblock active %}
+
+{% block body %}
+    <h1 style="color: red;text-align: center; text-decoration: underline; font-weight: bold; font-size: 50px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 100px;">Upload the news Here .... </h1>
+
+   <div style="border: 5px solid black; margin-bottom: 50px; margin-top : 50px;" class="container">
+    <form action="/Admin/upload/" method="POST" style="margin-top: 30px; margin-bottom: 30px;"> {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Title : </label>
+          <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Title">
+        </div>
+     
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Content : </label>
+          <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Upload the post</button>
+      </form>
+   </div>
+    {% endblock body %}  

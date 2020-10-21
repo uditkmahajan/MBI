@@ -1,0 +1,56 @@
+{% extends 'admin/basic.html' %}
+{% block factive %} active{% endblock factive %}
+{% block body%} 
+     <h1 style="color: red; font-size: 50; font-family: cursive; font: bold; margin-top: 110px; text-align: center; text-decoration:underline"><strong>FeedBack from the customer's side</strong></h1>  
+  
+     <div class=" my-5" style="margin-left: 150px;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+         {% for i in length %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}"></li>
+         {% endfor %}
+        </ol>
+
+
+ <!-- starting crousel here-->
+ <div class="carousel-inner">
+  <div class="carousel-item active">
+      <div class="row">
+        {% for i in allfeed %}
+         <div class="col-sm-4 col-lg-4 col-md-4">
+           <div class="card" style="background-color: rgb(250, 183, 37); width: 25rem; height: 600px; border: orange solid 7px;">
+             <img src="/media/{{i.Profile}}" class="card-img-top" style="padding-right: 2px ;padding-left : 2px; height: 350px; width: 390px;" alt="...">
+             <div class="card-body">
+             <p class="card-text" style="font-size: 25px; color: white; font-family:'Times New Roman', Times, serif;">{{i.Feedback}}</p>
+             <p class="card-text " style= " font-size: 25px; text-align: right; color: white; font-family:'Times New Roman', Times, serif;">-{{i.Name}}</p>
+
+             </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 and forloop.counter >= 3 and not forloop.last  %}
+               </div> <!--row-->
+              </div> <!--crausel item-->
+              <div class="carousel-item ">
+                <div class="row">
+        {% endif %}
+  {% endfor %}
+</div>  <!-- row -->
+</div> <!-- active -->
+</div> <!-- crousel inner -->
+        <a class="carousel-control-prev"  href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" style="background-color: black; margin-left: 1px;" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" style="background-color: black; margin-right: 10px;" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+       </div> <!--carouselExampleIndicators -->
+
+    </div><!-- container  -->
+      
+     {% endblock body %} 
+
+
+    

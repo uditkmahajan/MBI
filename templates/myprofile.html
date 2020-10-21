@@ -1,0 +1,58 @@
+{% extends "basic.html" %}
+
+{% block body %}
+   <p style="margin-top: 100px; padding-top: 30px; margin-bottom: 20px; height: 200px;  font-size: 60px; font-family:'Times New Roman', Times, serif; text-align: center; text-decoration: underline; color: red; background-color: rgba(236, 240, 46, 0.849);">Change your Account here </p> <hr>
+ <div class="container" style="margin-left:700px ;">
+  <img src="/media/{{alluser.Profile}}" style="border: 2px solid black; border-radius: 50%; height: 400px; width: 400px;" alt="...">
+</a></div>
+  
+
+   <form action="/myprofile/" method="POST" enctype="multipart/form-data">   {% csrf_token %}
+<div class="container">
+      <div class="form-group">
+        <label style="font-size: 20px;" for="exampleFormControlInput1"><strong> Full Name : </strong></label>
+        <input type="text" name="full" class="form-control" id="exampleFormControlInput1" placeholder="Name Surname" value="{{alluser.Name}}">
+      </div>
+      <div class="form-group">
+      <label style="font-size: 20px;" for="exampleFormControlInput1"><strong>Email : </strong></label>
+      <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value="{{alluser.Email}}">
+    </div>
+    <div class="form-group">
+      <label style="font-size: 20px;" for="exampleFormControlInput1"><strong>Number : </strong></label>
+      <input type="number" name="number" class="form-control" id="exampleFoControlInput1" placeholder="1234567890" value="{{alluser.Number}}">
+    </div>
+    <div class="form-group">
+      <label style="font-size: 20px;" for="exampleFormControlInput1"><strong>Address :</strong> </label>
+      <input type="text" name="address" class="form-control" id="exampleFotrolInput1" placeholder="house no./ward no. - area name" value="{{alluser.Address}}">
+    </div>
+    <div class="form-group">
+      <label style="font-size: 20px;" for="exampleFormControlInput1"><strong>City :</strong> </label>
+      <input type="text" name="city" class="form-control" id="exampleFormControlIput1" placeholder="" value="{{alluser.City}}">
+    </div>
+    <div class="form-group ">
+      <label style="font-size: 20px;" for="inputState"><strong> State : </strong></label>
+      <select id="inputState" name="state" class="form-control">
+        <option selected>Choose...</option>
+                <option>Madhya Pradesh</option>  <option>Uttar Pradesh</option> <option>Andra Pradesh</option>
+                <option>Haryana</option> <option>Jammu & Kashmir</option>  <option>Assam</option>  <option>West Bangal</option> 
+                <option>Telangana</option> <option>Kerala</option> <option>Goa</option> <option>Gujrat</option>
+                <option>Rajasthan</option> <option>Delhi</option> <option>Chhattisgarh</option> <option>Bihar</option>
+                <option>Arunanachal Pradesh</option> <option>Maharashtra</option> <option>Tamil Nadu</option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label style="font-size: 20px;" for="only"><strong> Change Password :</strong> </label>
+      <input type="password" name="password" class="form-control" placeholder="Enter your new password" id="password" name="password">
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1" style="font-size: 20px;"><strong>Upload your Profile :</strong></label>
+        <input type="file" name="profile" class="form-control-file" id="exampleFormControlFile1" required >
+      </div>
+    </form>
+    <button type="submit" class="btn btn-primary btn-lg"> Apply the changes</button>
+
+  </div>
+  </form>
+
+{% endblock body %}

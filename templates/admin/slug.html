@@ -1,0 +1,56 @@
+{% extends "admin/basic.html" %}
+
+{% block body %}
+   <p style="margin-top: 100px; padding-top: 30px; margin-bottom: 20px; height: 200px;  font-size: 60px; font-family:'Times New Roman', Times, serif; text-align: center; text-decoration: underline; color: red; background-color: rgba(236, 240, 46, 0.849);">These is all about the customer</p> <hr>
+ <div class="container" style="margin-left:700px ;">
+  <img src="/media/{{cust.Profile}}" style="border: 2px solid black; border-radius: 50%; height: 400px; width: 400px;" alt="...">
+</a></div>
+  
+<div class="container mt-5">
+    <div class="row" style="color: green; font-family: cursive;">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <h1><strong>Customer Id :</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <h1><strong>MBIID{{cust.s_no}}</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <h1><strong>Customer Name :</strong></h1>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-5">
+            <h1><strong>{{cust.Name}}</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <h1><strong>Customer Email :</strong></h1>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-5">
+            <h1><strong>{{cust.Email}}</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <h1><strong>Customer Number :</strong></h1>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-5">
+            <h1><strong>{{cust.Number}}</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <h1><strong>Customer City :</strong></h1>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-5">
+            <h1><strong>{{cust.City}}</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <h1><strong>Customer State :</strong></h1>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-5">
+            <h1><strong>{{cust.State}}</strong></h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <h1><strong>Customer Feedback :</strong></h1>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-5">
+            <h1><strong>{{cust.Feedback}}</strong></h1>
+        </div>
+    </div>
+</div>
+   
+{% endblock body %}

@@ -1,0 +1,28 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+<p style="margin-top: 10px; color: red; text-align: center; text-decoration: underline; font-size: 50px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">These are the updates about our Bank related Services</p>
+  {% if total != 0 %}
+<p style="color: orange; text-decoration: underline; font-size: 40px; text-align: center; margin-top: 20px;">Latest Updates</p>
+<hr>
+{% endif %}
+{% for i in allupdates %}
+
+{% if forloop.counter0 == total %}
+<p style="color: orange; font-size: 40px; text-decoration:underline; text-align: center; margin-top: 20px;">Previous Updates</p>
+<hr>
+ {% endif %}
+
+<div class="container mt-5" >
+  <div class="card" style="max-width: 900px; height:300px; border: 2px rgb(36, 105, 184) solid; ">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 50px ; text-decoration: underline; color: yellow;">{{i.Topic}}</h5> <hr>
+      <p class="card-text" style="height: 100px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: green; font-size: 30px;">{{i.Content}}</p>
+    <hr>  <p style="float: inline-end; "><strong>Uploded on  :</strong> {{i.Upload_date}}</p>
+    </div>
+  </div>
+
+</div>
+{% endfor %}
+
+{% endblock body %}
