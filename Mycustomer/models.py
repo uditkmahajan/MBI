@@ -1,4 +1,5 @@
 from django.db import models
+from picklefield.fields import PickledObjectField
 
 # Create your models here.
 class Updates(models.Model) :
@@ -45,4 +46,4 @@ class HomeLoan(models.Model) :
         return self.Name
 
 class EucationLoan(models.Model) :
-    pass  
+    model=PickledObjectField()

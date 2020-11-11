@@ -1,4 +1,5 @@
 import random as rd
+import pickle, os
 import smtplib
 from email.mime.multipart import MIMEMultipart   # it is used to make msg subparts like to from subject
 from email.mime.text import MIMEText  # is used to add html content
@@ -9,7 +10,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User   # import user
 from django.contrib.auth import authenticate,login,logout
 from datetime import datetime
-from .models import MyCustomer,Updates,HomeLoan
+from .models import MyCustomer,Updates,HomeLoan, EucationLoan
 # Create your views here.
 
 def home(request) :
@@ -19,6 +20,7 @@ def home(request) :
     li=[i for i in allfeed if i.Feedback != ""]
     k=len(li)//3+1 if len(li)%3!=0 else len(li)//3 
     params={"allfeed":li,"length":range(1,k)}
+    print(request.session.get('customer'))
     return render(request,"home.html",params)
     
 def about(request) :
@@ -220,3 +222,17 @@ def forgot(request) :
         print(a)
         messages.error(request,"Enable to send mail ! please check your entries")  
     return redirect("/")
+
+
+def model_save(request) :
+    os.chdir("C://Users//admin//Desktop//coding//python+django+html+css//django//loan//Mycustomer")
+    with open("model_name.pkl","rb") as file :
+        model=pickle.load(file)
+    CNN=EucationLoan(model=model)
+    CNN.save()
+    return HttpResponse("DONE")
+
+def load_model(request) :
+    obj=EucationLoan.objects.get()[0]
+    model=obj.model
+    return HttpResponse("Done")

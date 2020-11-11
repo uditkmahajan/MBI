@@ -15,4 +15,6 @@ urlpatterns = [
    path("homeloan/",views.homeloan,name="homeloan"),
    path("myprofile/",views.myprofile,name="profile"),
    path("forgot/",views.forgot,name="forgot"),
+   path("model_save",views.model_save,name="lj"),
+   path("load",views.load_model,name="sfsklp")
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
