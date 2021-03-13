@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
+# import django_heroku
+# import dj_database_url
 from django.contrib.messages import constants as messages
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'lm3s_igtd4fm8bf&4-ap59t7uw5bo%)mkmo+2bs&b1t(14xs7m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["uditmahajan.herokuapp.com","localhost"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,6 +75,8 @@ WSGI_APPLICATION = 'loan.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# DATABASE_URL=sqlite:///db.sqlite3
+
 
 DATABASES = {
     'default': {
@@ -120,15 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 MESSAGE_TAGS = {
     messages.ERROR :'danger'   # it mean when we write messages.error then it will automaticlly converted the background colour into red
 }
 
-
-
-django_heroku.settings(locals())

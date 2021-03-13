@@ -1,1 +1,0 @@
-web: gunicorn loan.wsgi 
