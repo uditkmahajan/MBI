@@ -1,79 +1,135 @@
 {% extends 'basic.html' %}
 {% block title %}Services{% endblock title %}
+
+{% block css %}
+<style>
+    .heading {
+        color: red;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 2.7vw;
+        margin-top: 3%;
+    }
+
+    .head {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .img-fluid {
+        height: 17vw !important;
+        width: 30vw !important;
+    }
+
+    p,
+    .btn-sm {
+        font-size: 1.5vw;
+    }
+
+    @media only screen and (max-width:800px) {
+        .heading {
+            margin-top: 10%;
+        }
+    }
+
+    @media only screen and (max-width:590px) {
+        .container {
+            width: 80vw;
+            margin: auto;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+
+        .p {
+            font-size: 2.9vw;
+        }
+    }
+
+    @media only screen and (max-width:500px) {
+        .img-fluid {
+            height: 25vw !important;
+        }
+    }
+</style>
+{% endblock css %}
 {% block body %}
-<p style="margin-top: 10px; text-align: center; color: red; text-decoration: underline; font-size: 50px; font-family:'Times New Roman', Times, serif;">These are the current services provided our bank</p>
- <div style="color: yellow; font-size: 40px; margin-left: 50px; text-decoration: underline; font: bold;">
- <p style="margin-top: 20px;"><strong> Choose any type of loan : -</strong> </p>
+<p class="heading">These are the current services provided our bank</p>
+<div class="text-center" style="color: yellow;">
+    <p class="p"><strong> Choose any type of loan : -</strong> </p>
 </div>
-<div class="container mt-5 mb-5" style="border: 1px solid blue;">
-   <div class="row pt-2 pb-2">
-       <div class="col-sm-6 col-md-6 col-lg-6" >
-           <img src="/media/home/homeloan.jpg" class="img-fluid" style="height: 300px; max-width:500px;" alt="">
-       </div>
-       <div class="col-sm-6 col-md-6 col-lg-6">
-        <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Home loan</p>
-        <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Get more details about laon</p>
-        <a href="/homeloan"> <button type="button" style="font-size: 20px;" class="btn btn-outline-success btn-lg my-2 my-sm-0" aria-expanded="false">
-           <p style="color: green;"> Apply for loan</p>
-        </a> </button>
-    </div> 
-   </div>
-</div>
-   <div class="container mt-5 mb-5" style="border: 1px solid blue;">
-   <div class="row pt-2 pb-2">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="/media/home/carloan.jpg" class="img-fluid" style="height: 300px; max-width:700px;" alt="">
+<div class="container mt-2 mb-2" style="border: 1px solid blue;">
+    <div class="row pt-2 pb-2">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <img src="/media/home/homeloan.jpg" class="img-fluid img-thumbnail" alt="">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <p class="head" style="color: blue;">Home loan</p>
+            <p style="color: blue; ">Get more details about laon</p>
+            <a href="/homeloan"> <button type="submit" class="btn btn-outline-success btn-sm my-2 my-sm-0"
+                    aria-expanded="false">
+                    Apply for loan
+                </button></a>
+        </div>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Car loan</p>
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Get more details about laon</p>
-    <a href="/homeloan"> <button type="submit" style="font-size: 20px;" class="btn btn-outline-success btn-lg my-2 my-sm-0" aria-expanded="false">
-         Apply for loan
-     </button></a>
- </div> 
 </div>
-   </div>
-   <div class="container mt-5 mb-5" style="border: 1px solid blue;">
-<div class="row pt-2 pb-2">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="/media/home/personaloan.jpg" class="img-fluid" style="height: 300px; max-width:700px;" alt="">
+<div class="container mt-2 mb-2" style="border: 1px solid blue;">
+    <div class="row pt-2 pb-2">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <img src="/media/home/carloan.jpg" class="img-fluid img-thumbnail" alt="">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <p class="head" style="color: blue; ">Car loan</p>
+            <p style="color: blue; ">Get more details about laon</p>
+            <a href="/homeloan"> <button type="submit" class="btn btn-outline-success btn-sm my-2 my-sm-0"
+                    aria-expanded="false">
+                    Apply for loan
+                </button></a>
+        </div>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Personal loan</p>
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Get more details about laon</p>
-     <button type="button" style="font-size: 20px;" class="btn btn-outline-success btn-lg my-2 my-sm-0" aria-expanded="false">
-         Apply for loan
-       </button>
- </div> 
 </div>
-   </div>
-   <div class="container mt-5 mb-5" style="border: 1px solid blue;">
-<div class="row pt-2 pb-2">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="/media/home/educationloan.jpg" class="img-fluid" style="height: 300px; max-width:700px;" alt="">
+<div class="container mt-2 mb-2" style="border: 1px solid blue;">
+    <div class="row pt-2 pb-2">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <img src="/media/home/personaloan.jpg" class="img-fluid img-thumbnail" alt="">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <p class="head" style="color: blue;">Personal loan</p>
+            <p style="color: blue; ">Get more details about laon</p>
+            <button type="button" class="btn btn-outline-success btn-sm my-2 my-sm-0" aria-expanded="false">
+                Apply for loan
+            </button>
+        </div>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Educational loan</p>
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Get more details about laon</p>
-     <button type="button" style="font-size: 20px;" class="btn btn-outline-success btn-lg my-2 my-sm-0" aria-expanded="false">
-         Apply for loan
-       </button>
- </div> 
 </div>
-</div>
-<div class="container mt-5 mb-5" style="border: 1px solid blue;">
-<div class="row pt-2 pb-2">
-    <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="/media/home/travelloan.jpg" class="img-fluid" style="height: 300px; max-width:700px;" alt="">
+<div class="container mt-2 mb-2" style="border: 1px solid blue;">
+    <div class="row pt-2 pb-2">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <img src="/media/home/educationloan.jpg" class="img-fluid img-thumbnail" alt="">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <p class="head" style="color: blue; ">Educational loan</p>
+            <p style="color: blue;">Get more details about laon</p>
+            <button type="button" class="btn btn-outline-success btn-sm my-2 my-sm-0" aria-expanded="false">
+                Apply for loan
+            </button>
+        </div>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Trave loan</p>
-     <p style="color: blue; font-size: 30px; text-decoration: underline; font-family: cursive;">Get more details about laon</p>
-     <button type="button" style="font-size: 20px;" class="btn btn-outline-success btn-lg my-2 my-sm-0" aria-expanded="false">
-         Apply for loan
-       </button>
- </div> 
 </div>
+<div class="container mt-2 mb-2" style="border: 1px solid blue;">
+    <div class="row pt-2 pb-2">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <img src="/media/home/travelloan.jpg" class="img-fluid img-thumbnail" alt="">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-6">
+            <p class="head" style="color: blue; ">Travel loan</p>
+            <p style="color: blue;">Get more details about laon</p>
+            <button type="button" class="btn btn-outline-success btn-sm my-2 my-sm-0" aria-expanded="false">
+                Apply for loan
+            </button>
+        </div>
+    </div>
 </div>
 <hr>
 

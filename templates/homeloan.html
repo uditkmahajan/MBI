@@ -1,89 +1,149 @@
 {% extends 'basic.html' %}
+
+{% block css %}
+<style>
+  .heading {
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2.7vw;
+    margin-top: 5%;
+  }
+
+  .ul,
+  .ol {
+    padding: 5% 5%;
+  }
+
+  li {
+    font-size: 1.5vw;
+  }
+
+  #inputState {
+    font-size: 1vw !important;
+  }
+
+  @media only screen and (max-width:600px) {
+    .heading {
+      margin-top: 10%;
+    }
+  }
+
+  @media only screen and (max-width:500px) {
+    .a {
+      margin-top: 20%
+    }
+
+    label,
+    input,
+    #inputState,
+    .btn {
+      font-size: 2.5vw !important;
+    }
+
+    .container {
+      width: 70vw;
+      margin: auto;
+    }
+  }
+</style>
+{% endblock css %}
 {% block body %}
 <div class="container">
-<p style="margin-top: 100px; color:red; font-size: 50px; text-align: center;font-family: Arial, Helvetica, sans-serif; text-decoration: underline;">What is Home Loan?</p>
-  <div style="color: yellow;background-color: rgb(238, 155, 0);border-radius: 20px; font-size: 30px; font-family: cursive;">
-      <ul>
-    <li> A home loan is an amount of money that an individual borrows from a bank or money lending company at a certain rate of interest to be paid with the EMI every month. The property is taken as a security by the money lending company for the Home Loan.</li>
-    <li> The property can either be commercial or personal in nature.</li>
-    <li> When the borrower cannot pay the dues, the lender will possess all the legal rights to recover the outstanding loan amount by sale of the property in question.</li>
- 
-</ul></div>
-</div>
-<div class="container">
-<p style="margin-top: 110px; font-size: 50px; color: red; text-decoration: underline;">WHY CHOOSE MBI's HOME LOANS? </p>
-  <ol style="background-color: lightblue; border-radius: 20px; color: blue; font-size: 30px; font-family: cursive;">   
-  <li>  Attractive interest rates to make your Home Loans affordable and easier on your pocket.</li>
-   <li> Customized repayment options to suit your needs.</li>
-  <li>  No hidden charges.</li>
-   <li> Expert legal and technical counseling to help you make the right home buying decision.</li>
-</ol>
-</div>
+  <p class="heading a">What is Home Loan?</p>
+  <div style="color: yellow;background-color: rgb(238, 155, 0);border-radius: 20px;">
+    <ul class="ul">
+      <li> A home loan is an amount of money that an individual borrows from a bank or money lending company at a
+        certain rate of interest to be paid with the EMI every month. The property is taken as a security by the money
+        lending company for the Home Loan.</li> <br>
+      <li> The property can either be commercial or personal in nature.</li> <br>
+      <li> When the borrower cannot pay the dues, the lender will possess all the legal rights to recover the
+        outstanding loan amount by sale of the property in question.</li>
 
-<br> <hr>
- <p style="text-align: center; color: orange; text-decoration: underline; font-size: 50px; margin-top: 70px; font-family: cursive;">Fill thefollowing all details correctly to get the home loan ...</p>
- <div class="container" style="margin-top:50px;padding-top: 10px; padding-bottom: 10px; border : 1px solid black;">
-    <form action="/homeloan/" method="POST"> {% csrf_token %}
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Applicant Name :</label>
-          <input type="text" name="fname" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" required>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Applicant Email :</label>
-            <input type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@gmail.com" required>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Applicant Number</label>
-            <input type="number" name="number" class="form-control" id="exampleFormControlInput1" placeholder="1234567890" required>
-          </div>
-          <div class="form-group ">
-            <label for="inputState">Applicant Gender</label>
-            <select id="inputState" name="gender" class="form-control"required>
-              <option selected>Male</option>
-              <option>Female</option>
-            </select>
-          </div>
-          <div class="form-group ">
-            <label for="inputState">Married status</label>
-            <select id="inputState" name="married" class="form-control" required>
-              <option selected>Married</option>
-              <option>Unmarried</option>
-            </select>
-          </div>
-          <div class="form-group ">
-            <label for="inputState">Education status</label>
-            <select id="inputState" name="edu" class="form-control" required>
-              <option selected>Graduated</option>
-              <option>Ungraduated</option>
-            </select>
-          </div>
-          <div class="form-group ">
-            <label for="inputState">Self emplyed</label>
-            <select id="inputState" name="employ" class="form-control" required>
-              <option selected>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Lona amount</label>
-            <input type="number" name="lamo" class="form-control" id="exampleFormControlInput1" placeholder="" required>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Applicant Income</label>
-            <input type="number" name="income" class="form-control" id="exampleFormControlInput1" placeholder="annual income" required>
-          </div>
-          <div class="form-group ">
-            <label for="inputState">Property area</label>
-            <select id="inputState" name="area" class="form-control" required>
-              <option selected>Urban</option>
-              <option>Semi-urban</option>
-              <option>Rural</option>
-            </select>
-          </div> 
-          <button type="submit" class="btn btn-outline-secondary btn-lg">Apply for loan</button>
-      </form>
-      <p style="font-size: 20px;"><strong>Note : </strong> You will get an email when your loan will be approved by manager</p>
+    </ul>
+  </div>
+</div>
+<div class="container mb-1">
+  <p class="heading">WHY CHOOSE MBI's HOME LOANS?
+  </p>
+  <ol class="ol" style="background-color: lightblue; border-radius: 20px; color: blue;">
+    <li> Attractive interest rates to make your Home Loans affordable and easier on your pocket.</li>
+    <li> Customized repayment options to suit your needs.</li>
+    <li> No hidden charges.</li>
+    <li> Expert legal and technical counseling to help you make the right home buying decision.</li>
+  </ol>
 </div>
 
+<hr>
+<p class="heading mt-0 mb-0" style="color: orange;">
+  Fill the following details correctly to get the home loan ...</p>
+<div class="container" style=" border : 1px solid black;">
+  <form action="/homeloan/" method="POST"> {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Applicant Name :</label>
+      <input type="text" name="fname" class="form-control" id="exampleFormControlInput1" placeholder="Full Name"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Applicant Email :</label>
+      <input type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@gmail.com"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Applicant Number</label>
+      <input type="number" name="number" class="form-control" id="exampleFormControlInput1" placeholder="1234567890"
+        required>
+    </div>
+    <div class="form-group ">
+      <label for="inputState">Applicant Gender</label>
+      <select id="inputState" name="gender" class="form-control" required>
+        <option selected>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label for="inputState">Married status</label>
+      <select id="inputState" name="married" class="form-control" required>
+        <option selected>Married</option>
+        <option>Unmarried</option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label for="inputState">Education status</label>
+      <select id="inputState" name="edu" class="form-control" required>
+        <option selected>Graduated</option>
+        <option>Ungraduated</option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label for="inputState">Self emplyed</label>
+      <select id="inputState" name="employ" class="form-control" required>
+        <option selected>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Lona amount</label>
+      <input type="number" name="lamo" class="form-control" id="exampleFormControlInput1" placeholder="" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Applicant Income</label>
+      <input type="number" name="income" class="form-control" id="exampleFormControlInput1" placeholder="annual income"
+        required>
+    </div>
+    <div class="form-group ">
+      <label for="inputState">Property area</label>
+      <select id="inputState" name="area" class="form-control" required>
+        <option selected>Urban</option>
+        <option>Semi-urban</option>
+        <option>Rural</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-outline-secondary btn-sm">Apply for loan</button>
+  </form>
+  <p class="mt-2"><strong>Note : </strong> You will get an email when your loan will be approved by manager
+  </p>
+</div>
 
- {% endblock body %}
+
+{% endblock body %}

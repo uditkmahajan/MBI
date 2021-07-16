@@ -3,163 +3,249 @@
 {% block title %}About us{% endblock title %}
 {% block css %}
 <style>
-#head{
-   
-    font-style: italic;
+  .heading {
+    color: red;
     text-align: center;
-    margin-bottom: 30px;
-}
+    text-decoration: underline;
+    font-size: 2.7vw;
+    margin-top: 3%;
+  }
 
+  h5 {
+    font-size: 2vw;
+  }
+
+  p {
+    font-size: 1.5vw;
+  }
+
+  .member {
+    padding: 0px 5%;
+  }
+
+  .card {
+    box-shadow: 4px 6px 8px 0px grey;
+  }
+
+  .card-title {
+    font-size: 1.4vw;
+  }
+
+  .card-text {
+    font-size: 1.2vw;
+  }
+
+  .card-img-top {
+    height: 20vw !important;
+  }
+
+  @media only screen and (max-width:550px) {
+    .col-4 {
+      padding: 0% 1%;
+    }
+
+    h5 {
+      font-size: 2.4vw;
+    }
+
+    p {
+      font-size: 1.9vw;
+    }
+
+    .card {
+      height: 60vw;
+    }
+
+    .card-title {
+      font-size: 1.7vw;
+    }
+
+    .card-text {
+      font-size: 1.5vw;
+    }
+
+    .card-img-top {
+      height: 30vw !important;
+    }
+  }
+
+  @media only screen and (max-width:430px) {
+    h5 {
+      font-size: 2.7vw;
+    }
+
+    p {
+      font-size: 2.4vw;
+    }
+
+    .card {
+      height: 80vw;
+    }
+
+    .card-title {
+      font-size: 2vw;
+    }
+
+    .card-text {
+      font-size: 1.9vw;
+    }
+
+    .card-img-top {
+      height: 35vw !important;
+    }
+  }
 </style>
 {% endblock css %}
-{% block body %} 
+{% block body %}
 <br><br><br>
-<div id="head" style="margin-top: 20px; text-decoration: underline; font-size: 60px; font-family: Georgia, 'Times New Roman', Times, serif; color: red;"><strong>About Our Bank </strong></div>
-<p class="container" style="background-color: rgba(218, 156, 49, 0.384); color: rgb(250, 144, 6); font-size: 30px; font-size: 60px; font-family: Georgia, 'Times New Roman', Times, serif;">The Maheshwar bank of India <strong>(MBI)</strong> was established in 2008 in Maheshwar. the Maheshwar Bank of India is one of the 
-biggest Bank in India . Currently ,it is public sector bank , multinational in nature and is a financial services company 
-There are several reason which have contributed to making the state Maheshwar Bank Of India (MBI) the biggest and most popular
-bank in the country . Getting a jog here is a matter of great respect and pride . <br>
-Hence , if you are someone , who wants a job here , make sure that you do your competitive exam prepration properly.  
-<br>
-Our bank was established by our team memebers , which do a lot of hardwork and do their all work with sincerity so that we 
-can give our best to our customers and can full all their requirments , Hence the customer will get 100% satisfaction.  </p>
+<div class="heading"><strong>About Our Bank </strong></div>
+<p class="container mt-2 mx-1" style="background-color: rgba(218, 156, 49, 0.384); color: rgb(250, 144, 6);">The
+  Maheshwar bank of India <strong>(MBI)</strong> was established in 2008 in Maheshwar. the Maheshwar Bank of India is
+  one of the
+  biggest Bank in India . Currently ,it is public sector bank , multinational in nature and is a financial services
+  company
+  There are several reason which have contributed to making the state Maheshwar Bank Of India (MBI) the biggest and most
+  popular
+  bank in the country . Getting a jog here is a matter of great respect and pride . <br>
+  Hence , if you are someone , who wants a job here , make sure that you do your competitive exam prepration properly.
+  <br>
+  Our bank was established by our team memebers , which do a lot of hardwork and do their all work with sincerity so
+  that we
+  can give our best to our customers and can full all their requirments , Hence the customer will get 100% satisfaction.
+</p>
 
-<br>
-<br>
-<p id="head" style="margin-top: 30px; text-decoration: underline; font-size: 60px; font-family: Georgia, 'Times New Roman', Times, serif; color: red;"><strong>These are our MBI's team Memebers</strong></p>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4 col-lg-4 col-xs-4 ">
-    <div class="card" style="width: 20rem;">
-        <img src="/media/home/manager.jpg" class="card-img-top img-fluid">
-        <div class="card-body">
-          <h5 class="card-title"><strong>akash Mehta</strong></h5>
-          <p class="card-text"><strong>Designation : </strong>Bank Manager </p>
-          <p class="card-text"><strong>Experiance of: </strong>25 yr.</p>
-          <p class="card-text"><strong>Email: </strong>aakash.mehta@MBI.com </p>
-        </div>
+<p class="heading">These are our MBI's team Memebers</p>
+<div class="row member">
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/manager.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>akash Mehta</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Bank Manager </p>
+        <p class="card-text"><strong>Experiance of: </strong>25 yr.</p>
+        <p class="card-text"><strong>Email: </strong>aakash.mehta@MBI.com </p>
       </div>
     </div>
-    <div class="col-sm-4 col-lg-4 col-xs-4">
-        <div class="card" style="width: 20rem;">
-            <img src="/media/home/manager5.jpg" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Liyra Brown</strong></h5>
-              <p class="card-text"><strong>Designation : </strong>Assistant Manager</p>
-              <p class="card-text"><strong>Experiance of : </strong>15 yr.</p>
-              <p class="card-text"><strong>Email: </strong>liyra.brown@MBI.com </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-xs-4">
-            <div class="card" style="width: 20rem;">
-                <img src="/media/home/manager6.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h5 class="card-title"><strong>Aashish Agrawal</strong></h5>
-                  <p class="card-text"><strong>Designation : </strong>Cash Officer</p>
-                  <p class="card-text"><strong>Experiance of : </strong>10 yr.</p>
-                  <p class="card-text"><strong>Email: </strong>pragya.joshi@MBI.com </p>
-                </div>
-              </div>
-            </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col-sm-4 col-lg-4 col-xs-4">
-    <div class="card" style="width: 20rem;">
-        <img src="/media/home/manager3.jpg" class="card-img-top img-fluid">
-        <div class="card-body">
-          <h5 class="card-title"><strong>Somya Sharma</strong></h5>
-          <p class="card-text"><strong>Designation : </strong>Casheior</p>
-          <p class="card-text"><strong>Experiance of : </strong>5 yr.</p>
-          <p class="card-text"><strong>Email: </strong>somya.sharma@MBI.com </p>
-        </div>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/manager5.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Liyra Brown</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Assistant Manager</p>
+        <p class="card-text"><strong>Experiance of : </strong>15 yr.</p>
+        <p class="card-text"><strong>Email: </strong>liyra.brown@MBI.com </p>
       </div>
     </div>
-    <div class="col-sm-4 col-lg-4 col-xs-4">
-        <div class="card" style="width: 20rem;">
-            <img src="/media/home/12.jpg" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Jhon Roy</strong></h5>
-              <p class="card-text"><strong>Designation : </strong>Loan Officer</p>
-              <p class="card-text"><strong>Experiance of : </strong>5 yr.</p>
-              <p class="card-text"><strong>Email: </strong>jhon.roy@MBI.com </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-xs-4">
-            <div class="card" style="width: 20rem;">
-                <img src="/media/home/8.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h5 class="card-title"><strong>Pratibha sing</strong></h5>
-                  <p class="card-text"><strong>Designation : </strong>Loan Manager</p>
-                  <p class="card-text"><strong>Experiance of : </strong>10 yr.</p>
-                  <p class="card-text"><strong>Email: </strong>pratibha.singh@MBI.com </p>
-                </div>
-              </div>
-            </div>
-    </div>
-    
-    <div class="row mt-4">
-        <div class="col-sm-4 col-lg-4 col-xs-4">
-    <div class="card" style="width: 20rem;">
-        <img src="/media/home/manage2.jpg" class="card-img-top img-fluid">
-        <div class="card-body">
-          <h5 class="card-title"><strong>Katrina Kaif</strong></h5>
-          <p class="card-text"><strong>Designation : </strong>Clerk</p>
-          <p class="card-text"><strong>Experiance of : </strong>2 yr.</p>
-          <p class="card-text"><strong>Email: </strong>katrina.kaif@MBI.com </p>
-        </div>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/manager6.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Aashish Agrawal</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Cash Officer</p>
+        <p class="card-text"><strong>Experiance of : </strong>10 yr.</p>
+        <p class="card-text"><strong>Email: </strong>pragya.joshi@MBI.com </p>
       </div>
     </div>
-    <div class="col-sm-4 col-lg-4 col-xs-4">
-        <div class="card" style="width: 20rem;">
-            <img src="/media/home/manager 4.jpg" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h5 class="card-title"><strong>James Jang</strong></h5>
-              <p class="card-text"><strong>Designation : </strong>Clerk</p>
-              <p class="card-text"><strong>YExperiance of : </strong>5 yr.</p>
-              <p class="card-text"><strong>Email: </strong>james.jang@MBI.com </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-xs-4">
-            <div class="card" style="width: 20rem;">
-                <img src="/media/home/11.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h5 class="card-title"><strong>Rahm Rim</strong></h5>
-                  <p class="card-text"><strong>Designation : </strong>Clerk</p>
-                  <p class="card-text"><strong>Experiance of : </strong>7 yr.</p>
-                  <p class="card-text"><strong>Email: </strong>rashm.rim@MBI.com </p>
-                </div>
-              </div>
-            </div>
-
+  </div>
+</div>
+<div class="row mt-4 member">
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/manager3.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Somya Sharma</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Casheior</p>
+        <p class="card-text"><strong>Experiance of : </strong>5 yr.</p>
+        <p class="card-text"><strong>Email: </strong>somya.sharma@MBI.com </p>
+      </div>
     </div>
-    <div class="row mt-4">
-    <div class="col-sm-4 col-lg-4 col-xs-4">
-        <div class="card" style="width: 20rem;">
-            <img src="/media/home/10.jpg" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Katrina Kaif</strong></h5>
-              <p class="card-text"><strong>Designation : </strong>Clerk</p>
-              <p class="card-text"><strong>Experiance of : </strong>4 yr.</p>
-              <p class="card-text"><strong>Email: </strong>katrina.kaif@MBI.com </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-xs-4">
-            <div class="card" style="width: 20rem;">
-                <img src="/media/home/9.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h5 class="card-title"><strong>Mark Jugarberk</strong></h5>
-                  <p class="card-text"><strong>Designation : </strong>Clerk</p>
-                  <p class="card-text"><strong>Experiance of : </strong>2 yr.</p>
-                  <p class="card-text"><strong>Email: </strong>mark.jugarberk@MBI.com </p>
-                </div>
-              </div>
-            </div>
-
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/12.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Jhon Roy</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Loan Officer</p>
+        <p class="card-text"><strong>Experiance of : </strong>5 yr.</p>
+        <p class="card-text"><strong>Email: </strong>jhon.roy@MBI.com </p>
+      </div>
     </div>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/8.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5> Pratibha sing</h5>
+        <p><strong>Designation : </strong>Loan Manager</p>
+        <p class="card-text"><strong>Experiance of : </strong>10 yr.</p>
+        <p class="card-text"><strong>Email: </strong>pratibha.singh@MBI.com </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4 member">
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/manage2.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Katrina Kaif</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Clerk</p>
+        <p class="card-text"><strong>Experiance of : </strong>2 yr.</p>
+        <p class="card-text"><strong>Email: </strong>katrina.kaif@MBI.com </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/manager 4.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>James Jang</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Clerk</p>
+        <p class="card-text"><strong>YExperiance of : </strong>5 yr.</p>
+        <p class="card-text"><strong>Email: </strong>james.jang@MBI.com </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/11.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Rahm Rim</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Clerk</p>
+        <p class="card-text"><strong>Experiance of : </strong>7 yr.</p>
+        <p class="card-text"><strong>Email: </strong>rashm.rim@MBI.com </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row mt-4 member">
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/10.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Katrina Kaif</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Clerk</p>
+        <p class="card-text"><strong>Experiance of : </strong>4 yr.</p>
+        <p class="card-text"><strong>Email: </strong>katrina.kaif@MBI.com </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-xs-4 col-4">
+    <div class="card">
+      <img src="/media/home/9.jpg" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h5 class="card-title"><strong>Mark Jugarberk</strong></h5>
+        <p class="card-text"><strong>Designation : </strong>Clerk</p>
+        <p class="card-text"><strong>Experiance of : </strong>2 yr.</p>
+        <p class="card-text"><strong>Email: </strong>mark.jugarberk@MBI.com </p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 {% endblock body %}
